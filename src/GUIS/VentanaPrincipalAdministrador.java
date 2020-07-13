@@ -3,6 +3,8 @@
 */
 package GUIS;
 
+import javax.swing.JOptionPane;
+
 public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
     public VentanaPrincipalAdministrador() {
         initComponents();
@@ -35,11 +37,21 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         jButtonRegistraDirectr.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonRegistraDirectr.setText("Registrar Director");
+        jButtonRegistraDirectr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistraDirectrActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonRegistraDirectr, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 200, 60));
 
         jButtonRegistrarCoordinador.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonRegistrarCoordinador.setText("<html><center"
             + ">Registar Coordinador");
+        jButtonRegistrarCoordinador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistrarCoordinadorActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonRegistrarCoordinador, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 200, 60));
 
         jButtonRegistrarProfesor.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -53,26 +65,56 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         jButtonAñadirCatalogo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonAñadirCatalogo.setText("Añadir Catálogo");
+        jButtonAñadirCatalogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAñadirCatalogoActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonAñadirCatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 200, 60));
 
         jButtonActualizarCatalogo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonActualizarCatalogo.setText("Actualizar Catálogo");
+        jButtonActualizarCatalogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonActualizarCatalogoActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonActualizarCatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 200, 60));
 
         jButtonEliminarDirector.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonEliminarDirector.setText("Eliminar Director");
+        jButtonEliminarDirector.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarDirectorActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonEliminarDirector, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, 200, 60));
 
         jButtonEliminarCoordinador.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonEliminarCoordinador.setText("<html><center>Eliminar Coordinador");
+        jButtonEliminarCoordinador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarCoordinadorActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonEliminarCoordinador, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 200, 60));
 
         jButtonEliminarProfesor.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jButtonEliminarProfesor.setText("Elimianr Profesor");
+        jButtonEliminarProfesor.setText("Eliminar Profesor");
+        jButtonEliminarProfesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarProfesorActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonEliminarProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 200, 60));
 
         jButtonCerrarSesion.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButtonCerrarSesion.setText("Cerrar Sesión");
+        jButtonCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCerrarSesionActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, -1, 30));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo.jpg"))); // NOI18N
@@ -86,6 +128,40 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         irARegistrarProfesor.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButtonRegistrarProfesorActionPerformed
+
+    private void jButtonRegistraDirectrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistraDirectrActionPerformed
+        JOptionPane.showMessageDialog(this, "Sin implementación");
+    }//GEN-LAST:event_jButtonRegistraDirectrActionPerformed
+
+    private void jButtonRegistrarCoordinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarCoordinadorActionPerformed
+        JOptionPane.showMessageDialog(this, "Sin implementación");
+    }//GEN-LAST:event_jButtonRegistrarCoordinadorActionPerformed
+
+    private void jButtonAñadirCatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAñadirCatalogoActionPerformed
+        JOptionPane.showMessageDialog(this, "Sin implementación");
+    }//GEN-LAST:event_jButtonAñadirCatalogoActionPerformed
+
+    private void jButtonActualizarCatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActualizarCatalogoActionPerformed
+       JOptionPane.showMessageDialog(this, "Sin implementación");
+    }//GEN-LAST:event_jButtonActualizarCatalogoActionPerformed
+
+    private void jButtonEliminarDirectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarDirectorActionPerformed
+        JOptionPane.showMessageDialog(this, "Sin implementación");
+    }//GEN-LAST:event_jButtonEliminarDirectorActionPerformed
+
+    private void jButtonEliminarCoordinadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarCoordinadorActionPerformed
+       JOptionPane.showMessageDialog(this, "Sin implementación");
+    }//GEN-LAST:event_jButtonEliminarCoordinadorActionPerformed
+
+    private void jButtonEliminarProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarProfesorActionPerformed
+        JOptionPane.showMessageDialog(this, "Sin implementación");
+    }//GEN-LAST:event_jButtonEliminarProfesorActionPerformed
+
+    private void jButtonCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarSesionActionPerformed
+       IniciarSesion regresarIniciarSesion = new IniciarSesion();
+       regresarIniciarSesion.setVisible(true);
+       dispose();
+    }//GEN-LAST:event_jButtonCerrarSesionActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {

@@ -3,6 +3,7 @@
 */
 package GUIS;
 
+import LogicaDeNegocio.ValidacionesDeRegistroDeUsuario;
 import javax.swing.JOptionPane;
 
 public class RegistrarProfesor extends javax.swing.JFrame {
@@ -138,7 +139,50 @@ public class RegistrarProfesor extends javax.swing.JFrame {
         }
     }
     
+    String nombreProfesor = "";
+    String apellidoPaterno = "";
+    String apellidoMaterno = "";
+    String rfc = "";
+    String curp = "";
+    String numeroDePersonal = "";
+    String genero = "";
+    String correo = "";
+    String contraseña = "";
+    
     void validarCampos(){
+         if(jTextFieldNombre.getText().isEmpty() && jTextFieldApellidoPaterno.getText().isEmpty()
+               && jTextFieldApellidoMaterno.getText().isEmpty() && jTextFieldRFC.getText().isEmpty()
+                        && jTextFieldCURP.getText().isEmpty() && jTextFieldNumeroDePersonal.getText().isEmpty()
+                                && jTextFieldGenero.getText().isEmpty() && jTextFieldCorreo.getText().isEmpty()
+                                        && jTextFieldContraseña.getText().isEmpty()){
+                                                JOptionPane.showMessageDialog(this, "Favor de no dejar campos vacíos");  
+       }else{
+           nombreProfesor = jTextFieldNombre.getText();
+           apellidoPaterno = jTextFieldApellidoPaterno.getText();
+           apellidoMaterno = jTextFieldApellidoMaterno.getText();
+           rfc = jTextFieldRFC.getText();
+           curp = jTextFieldCURP.getText();
+           numeroDePersonal = jTextFieldNumeroDePersonal.getText();
+           genero = jTextFieldGenero.getText();
+           correo = jTextFieldCorreo.getText();
+           contraseña = jTextFieldContraseña.getText();
+           
+           ValidacionesDeRegistroDeUsuario usuario = new ValidacionesDeRegistroDeUsuario();
+
+           if((usuario.validarNombre(nombreProfesor) == true) && (usuario.validarNombre(apellidoPaterno)==true)
+                   && usuario.validarNombre(apellidoPaterno)==true && (usuario.validarRFCoCURP(rfc) == true)
+                            && (usuario.validarRFCoCURP(curp)==true) && (usuario.validarNumeroDePersonal(numeroDePersonal)== true)
+                                    && (usuario.validarGenero(genero)==true) && (usuario.validarCorreo(correo))
+                                            && (usuario.validarContraseña(contraseña)==true)){
+                                                guardarProfesor();
+           }else{
+               JOptionPane.showMessageDialog(this, "Información incorrecta,"
+                       + "Ingrese una información válida para cada campo");
+           }
+       }
+    }
+    
+    void guardarProfesor(){
         
     }
     
