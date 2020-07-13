@@ -1,6 +1,6 @@
 /*BRANDON TRUJILLO
 **12/07/2020
-*/
+*/ 
 package GUIS;
 public class IniciarSesion extends javax.swing.JFrame {
     public IniciarSesion() {
