@@ -23,6 +23,10 @@ public class DocenteDAO implements IDocenteDAO {
     private Connection connection;
     private Statement statement;
     private ResultSet results;
+    
+    public DocenteDAO () {
+        connectDB = new ConnectDB();
+    }
 
     @Override
     public void guardarDocente(Docente docente) throws SQLException, ClassNotFoundException {

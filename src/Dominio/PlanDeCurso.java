@@ -12,9 +12,12 @@ import java.util.Date;
  * @author gabrielflores
  */
 public class PlanDeCurso {
+    int id_plan;
     Date fechaInicio;
     Date fechaFin;
     String nombreCurso;
+    String listaTemas;
+    String listaActividades;
     int numeroActividades;
     
     public PlanDeCurso () {}
@@ -50,6 +53,31 @@ public class PlanDeCurso {
     public void setNumeroActividades(int numeroActividades) {
         this.numeroActividades = numeroActividades;
     }
+
+    public String getListaTemas() {
+        return listaTemas;
+    }
+
+    public void setListaTemas(String listaTemas) {
+        this.listaTemas = listaTemas;
+    }
+
+    public String getListaActividades() {
+        return listaActividades;
+    }
+
+    public void setListaActividades(String listaActividades) {
+        this.listaActividades = listaActividades;
+    }
+
+    public int getId_plan() {
+        return id_plan;
+    }
+
+    public void setId_plan(int id_plan) {
+        this.id_plan = id_plan;
+    }
+    
     
     
 }

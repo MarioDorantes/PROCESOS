@@ -12,6 +12,7 @@ import java.util.Date;
  * @author gabrielflores
  */
 public class Docente {
+    int id_docente;
     String nombre;
     String apellidoPaterno;
     String apellidoMaterno;
@@ -78,6 +79,15 @@ public class Docente {
     public void setNumPersonal(String numPersonal) {
         this.numPersonal = numPersonal;
     }
+
+    public int getId_docente() {
+        return id_docente;
+    }
+
+    public void setId_docente(int id_docente) {
+        this.id_docente = id_docente;
+    }
+    
     
     
 }
