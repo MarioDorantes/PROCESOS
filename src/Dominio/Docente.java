@@ -20,9 +20,23 @@ public class Docente {
     Date fechaNacimiento;
     String sexo;
     String numPersonal;
+    String rfc;
+    String curp;
+    String contraseña;
     
     
     public Docente () {}
+    public Docente (String numPersonal, String nombre, String apellidoMaterno, String apellidoPaterno, String rfc, String curp, String sexo, String correo, String contaseña) {
+    this.nombre = nombre;
+    this.apellidoMaterno = apellidoMaterno;
+    this.apellidoPaterno = apellidoPaterno;
+    this.correo = correo;
+    this.sexo = sexo;
+    this.numPersonal = numPersonal;
+    this.rfc = rfc;
+    this.curp = curp;
+    this.contraseña = contraseña;
+    }
 
     public String getNombre() {
         return nombre;
@@ -86,6 +100,27 @@ public class Docente {
 
     public void setId_docente(int id_docente) {
         this.id_docente = id_docente;
+    }
+    
+    public String getRfc(){
+        return rfc;
+    }
+    public void setRfc (String rfc){
+        this.rfc = rfc;
+    }
+    
+    public String getCurp(){
+        return curp;
+    }
+    public void setCurp(String curp){
+        this.curp = curp;
+    }
+    
+    public String getContraseña(){
+        return contraseña;
+    }
+    public void setContraseña(String contraseña){
+        this.contraseña = contraseña;
     }
     
     

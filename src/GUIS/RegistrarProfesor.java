@@ -3,7 +3,11 @@
 */
 package GUIS;
 
+import DataAccess.DocenteDAO;
 import LogicaDeNegocio.ValidacionesDeRegistroDeUsuario;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class RegistrarProfesor extends javax.swing.JFrame {
@@ -183,7 +187,13 @@ public class RegistrarProfesor extends javax.swing.JFrame {
     }
     
     void guardarProfesor(){
-        
+        DocenteDAO profesor = new DocenteDAO();
+        try {
+            profesor.guardarDocente(numeroDePersonal, nombreProfesor, apellidoMaterno, apellidoPaterno, rfc, curp, genero, correo, contraseña);
+        } catch (SQLException | ClassNotFoundException ex) {
+            JOptionPane.showMessageDialog(this, "No se puede acceder a la base de datos en este momento. Intente más tarde.");
+            Logger.getLogger(RegistrarProfesor.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     public static void main(String args[]) {

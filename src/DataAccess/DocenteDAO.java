@@ -29,17 +29,20 @@ public class DocenteDAO implements IDocenteDAO {
     }
 
     @Override
-    public void guardarDocente(Docente docente) throws SQLException, ClassNotFoundException {
+    public void guardarDocente(String numPersonal, String nombre, String apellidoMaterno, String apellidoPaterno, String rfc, String curp, String sexo, String correo, String contraseña) throws SQLException, ClassNotFoundException {
         connection = connectDB.getConnection();
-        String query = "INSERT INTO docente (numPersonal, nombre, apellidoMaterno, apellidoPaterno, correo, fechaNacimiento, sexo) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO docente (numPersonal, nombre, apellidoMaterno, apellidoPaterno, rfc, curp, sexo, correo, contraseña) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, docente.getNumPersonal());
-        statement.setString(2, docente.getNombre());
-        statement.setString(3, docente.getApellidoMaterno());
-        statement.setString(4, docente.getApellidoPaterno());
-        statement.setString(5, docente.getCorreo());
-        statement.setDate(6, (Date) docente.getFechaNacimiento());
-        statement.setString(7, (docente.getSexo()));
+        statement.setString(1, numPersonal);
+        statement.setString(2, nombre);
+        statement.setString(3, apellidoMaterno);
+        statement.setString(4, apellidoPaterno);
+        statement.setString(5, rfc);
+        statement.setString(6, curp);
+        statement.setString(7, sexo);
+        statement.setString(8, correo);
+        statement.setString(9, contraseña);
+        
         statement.executeQuery();
     }
     
