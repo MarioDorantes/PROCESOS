@@ -6,5 +6,5 @@ import java.sql.SQLException;
 
 
 public interface IAvanceDeCursoDAO {
-    public void saveAvanceDeCurso(AvanceDeCurso avance) throws SQLException, ClassNotFoundException;
+    public void guardarAvanceDeCurso(AvanceDeCurso avance) throws SQLException, ClassNotFoundException;
 }

@@ -21,7 +21,7 @@ public class AvanceDeCursoDAO implements IAvanceDeCursoDAO {
     }
     
     @Override
-    public void saveAvanceDeCurso(AvanceDeCurso avance) throws SQLException, ClassNotFoundException {
+    public void guardarAvanceDeCurso(AvanceDeCurso avance) throws SQLException, ClassNotFoundException {
         connection = connectDB.getConnection();
         String query = "INSERT INTO avancedecurso "
                 + "(actividadesPorRealizar, actividadesRealizadas, fechaDelAvance, porcentajeDeAvance, temasAbordados, temasPorAbordar) "

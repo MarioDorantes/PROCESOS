@@ -87,7 +87,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
                 jButtonActualizarCatalogoActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonActualizarCatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 200, 60));
+        getContentPane().add(jButtonActualizarCatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 210, 60));
 
         jButtonEliminarDirector.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonEliminarDirector.setText("Eliminar Director");
@@ -96,7 +96,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
                 jButtonEliminarDirectorActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonEliminarDirector, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, 200, 60));
+        getContentPane().add(jButtonEliminarDirector, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, 210, 60));
 
         jButtonEliminarCoordinador.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonEliminarCoordinador.setText("<html><center>Eliminar Coordinador");
@@ -105,7 +105,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
                 jButtonEliminarCoordinadorActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonEliminarCoordinador, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 200, 60));
+        getContentPane().add(jButtonEliminarCoordinador, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 210, 60));
 
         jButtonEliminarProfesor.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButtonEliminarProfesor.setText("Eliminar Profesor");
@@ -114,7 +114,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
                 jButtonEliminarProfesorActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonEliminarProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 200, 60));
+        getContentPane().add(jButtonEliminarProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 210, 60));
 
         jButtonCerrarSesion.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButtonCerrarSesion.setText("Cerrar Sesión");
@@ -132,7 +132,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonRegistrarProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarProfesorActionPerformed
-        validarPrecondiciones(todosLosDocentes);
+        obtenerTodosLosProfesores();
     }//GEN-LAST:event_jButtonRegistrarProfesorActionPerformed
 
     private void jButtonRegistraDirectrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistraDirectrActionPerformed
@@ -169,28 +169,30 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
        dispose();
     }//GEN-LAST:event_jButtonCerrarSesionActionPerformed
 
-    ArrayList <Docente> todosLosDocentes = null;
-    
-    public ArrayList obtenerTodosLosProfesores(){
+    ArrayList <Docente> todosLosDocentes = new ArrayList();
+        
+    public void obtenerTodosLosProfesores(){
+        DocenteDAO docente = new DocenteDAO();
         try {
-            DocenteDAO docente = new DocenteDAO();
             todosLosDocentes = docente.leerTodosLosDocentes();
+            validarPrecondiciones(todosLosDocentes);
         } catch (SQLException | ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(this, "No se pudo acceder a la base de datos, intente más tarde");
             Logger.getLogger(VentanaPrincipalAdministrador.class.getName()).log(Level.SEVERE, null, ex);
+        } catch(NullPointerException ex2){
+            JOptionPane.showMessageDialog(this, "se esta accediendo a una posicion invalida");
+            Logger.getLogger(VentanaPrincipalAdministrador.class.getName()).log(Level.SEVERE, null, ex2);
         }
-        return todosLosDocentes;
     }
-    
-    void validarPrecondiciones(ArrayList todosLosDocentes){
-      int numeroMaximoDeProfesores = 1;
-      if(todosLosDocentes.size() <= numeroMaximoDeProfesores){
+    void validarPrecondiciones(ArrayList<Docente> todosLosDocentes){
+      int numeroMaximoDeProfesores = 2;
+      if(todosLosDocentes.size() < numeroMaximoDeProfesores){
         RegistrarProfesor irARegistrarProfesor = new RegistrarProfesor();
         irARegistrarProfesor.setVisible(true);
         dispose();
       }else{
          JOptionPane.showMessageDialog(this, "Ya existen dos profesores registrados, para registrar otro"
-                 + "Elimine alguno");
+                 + " elimine alguno");
       }
         
     }

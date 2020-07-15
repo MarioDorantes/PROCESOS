@@ -213,11 +213,17 @@ public class RegistrarProfesor extends javax.swing.JFrame {
         try {
             profesor.guardarDocente(numeroDePersonal, nombreProfesor, apellidoMaterno, apellidoPaterno, curp, rfc, fechaNacimiento, genero, contraseña, correo);
             JOptionPane.showMessageDialog(this, "Registro exitoso");
-            dispose();
+            regresarAPantallaInicialAdministrador();
         } catch (SQLException | ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(this, "No se puede acceder a la base de datos en este momento. Intente más tarde.");
             Logger.getLogger(RegistrarProfesor.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    void regresarAPantallaInicialAdministrador(){
+       VentanaPrincipalAdministrador administrador = new VentanaPrincipalAdministrador();
+       administrador.setVisible(true);
+       dispose();
     }
     
     public static void main(String args[]) {

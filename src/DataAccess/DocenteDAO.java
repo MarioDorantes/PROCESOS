@@ -63,7 +63,6 @@ public class DocenteDAO implements IDocenteDAO {
             docente.setApellidoPaterno(results.getString("apellidoPaterno"));
             docente.setCurp(results.getString("curp"));
             docente.setRfc(results.getString("rfc"));
-            docente.setFechaNacimiento(results.getDate("fechaNacimiento"));
             docente.setSexo(results.getString("Genero"));
             docente.setCorreo(results.getString("correo"));
             todosLosDocentes.add(docente);

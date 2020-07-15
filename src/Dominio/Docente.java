@@ -12,16 +12,16 @@ import java.util.Date;
  * @author gabrielflores
  */
 public class Docente {
-    String nombre;
-    String apellidoPaterno;
-    String apellidoMaterno;
-    String correo;
-    Date fechaNacimiento;
-    String sexo;
-    String numPersonal;
-    String rfc;
-    String curp;
-    String contraseña;
+    private String nombre;
+    private String apellidoPaterno;
+    private String apellidoMaterno;
+    private String correo;
+    private Date fechaNacimiento;
+    private String sexo;
+    private String numPersonal;
+    private String rfc;
+    private String curp;
+    private String contraseña;
     
     
     public Docente () {}
