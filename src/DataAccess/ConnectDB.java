@@ -15,10 +15,10 @@ import java.util.logging.Logger;
  * @author BRANDON TRUJILLO
  */
 public class ConnectDB {
-    private static String url = "jdbc:mysql://localhost:3306/propractices?serverTimezone=US/Central";
-    private static String driverName = "my-sql-connector-java-8.0.21";
-    private static String username = "root";
-    private static String password = "Flipper10011";
+    private static String url = "jdbc:mysql://localhost:3308/CursosProcesos?serverTimezone=US/Central";
+    private static String driverName = "com.mysql.cj.jdbc.Driver";
+    private static String username = "BATC";
+    private static String password = "brandontrujillo17";
     private static Connection con;
 
     public static Connection getConnection() throws SQLException, ClassNotFoundException {

@@ -13,7 +13,7 @@ public class ValidacionesDeRegistroDeUsuario {
     
     
     public boolean validarNombre (String nombre) {
-        return validarNombre= nombre.matches("^([A-ZÑ]{1}[a-zñ]+[ ]?+[Á|É|Í|Ó|Ú|á|é|í|ó|ú]?){2,4}$");
+        return validarNombre= nombre.matches("^([A-ZÑ]{1}[a-zñ]+[ ]?){1,2}$");
     } 
      
     public boolean validarNumeroDePersonal(String numero){
@@ -25,7 +25,7 @@ public class ValidacionesDeRegistroDeUsuario {
     }
     
     public boolean validarRFCoCURP (String rfc){
-        return validarRFCoCURP = rfc.matches("^([A-Z][0-9]{18})+$");
+        return validarRFCoCURP = rfc.matches("^([A-Z][0-9]?){5,18}$");
     }
     
     public boolean validarCorreo (String correo){

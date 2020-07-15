@@ -42,6 +42,8 @@ public class RegistrarProfesor extends javax.swing.JFrame {
         jTextFieldContraseña = new javax.swing.JTextField();
         jButtonCancelar = new javax.swing.JButton();
         jButtonAceptar = new javax.swing.JButton();
+        jLabelFechaNaciemiento = new javax.swing.JLabel();
+        jTextFieldFechaNacimiento = new javax.swing.JTextField();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,52 +51,52 @@ public class RegistrarProfesor extends javax.swing.JFrame {
 
         jLabelTitulo.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabelTitulo.setText("Registrar Profesor");
-        getContentPane().add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, -1, -1));
+        getContentPane().add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, -1, -1));
 
         jLabelNombre.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelNombre.setText("Nombre :");
-        getContentPane().add(jLabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 90, -1));
+        getContentPane().add(jLabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 90, -1));
 
         jLabelApellidoPaterno.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelApellidoPaterno.setText("Apellido Paterno :");
-        getContentPane().add(jLabelApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 160, 20));
+        getContentPane().add(jLabelApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 160, 20));
 
         jLabelApellidoMaterno.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelApellidoMaterno.setText("Apellido Materno : ");
-        getContentPane().add(jLabelApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
+        getContentPane().add(jLabelApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
 
         jLabelRFC.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelRFC.setText("RFC :");
-        getContentPane().add(jLabelRFC, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, -1, -1));
+        getContentPane().add(jLabelRFC, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, -1, -1));
 
         jLabelCURP.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelCURP.setText("CURP :");
-        getContentPane().add(jLabelCURP, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, -1, -1));
+        getContentPane().add(jLabelCURP, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, -1, -1));
 
         jLabelNumeroDePersonal.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelNumeroDePersonal.setText("Número de personal :");
-        getContentPane().add(jLabelNumeroDePersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
+        getContentPane().add(jLabelNumeroDePersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
         jLabelGenero.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelGenero.setText("Genero :");
-        getContentPane().add(jLabelGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, -1, -1));
+        getContentPane().add(jLabelGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, -1, -1));
 
         jLabelCorreo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelCorreo.setText("Correo :");
-        getContentPane().add(jLabelCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, -1, -1));
+        getContentPane().add(jLabelCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, -1, -1));
 
         jLabelContraseña.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelContraseña.setText("Contraseña :");
-        getContentPane().add(jLabelContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, -1, -1));
-        getContentPane().add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 330, 30));
-        getContentPane().add(jTextFieldApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 330, 30));
-        getContentPane().add(jTextFieldApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 330, 30));
-        getContentPane().add(jTextFieldRFC, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 330, 30));
-        getContentPane().add(jTextFieldCURP, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 330, 30));
-        getContentPane().add(jTextFieldNumeroDePersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 330, 30));
-        getContentPane().add(jTextFieldGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 330, 30));
-        getContentPane().add(jTextFieldCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 330, 30));
-        getContentPane().add(jTextFieldContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 330, 30));
+        getContentPane().add(jLabelContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
+        getContentPane().add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 330, 30));
+        getContentPane().add(jTextFieldApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 330, 30));
+        getContentPane().add(jTextFieldApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 330, 30));
+        getContentPane().add(jTextFieldRFC, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 330, 30));
+        getContentPane().add(jTextFieldCURP, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 330, 30));
+        getContentPane().add(jTextFieldNumeroDePersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 330, 30));
+        getContentPane().add(jTextFieldGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 330, 30));
+        getContentPane().add(jTextFieldCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 330, 30));
+        getContentPane().add(jTextFieldContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 330, 30));
 
         jButtonCancelar.setBackground(new java.awt.Color(255, 153, 153));
         jButtonCancelar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -104,7 +106,7 @@ public class RegistrarProfesor extends javax.swing.JFrame {
                 jButtonCancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, 100, 30));
+        getContentPane().add(jButtonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 430, 100, -1));
 
         jButtonAceptar.setBackground(new java.awt.Color(153, 255, 153));
         jButtonAceptar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -114,7 +116,14 @@ public class RegistrarProfesor extends javax.swing.JFrame {
                 jButtonAceptarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 100, 30));
+        getContentPane().add(jButtonAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 100, -1));
+
+        jLabelFechaNaciemiento.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabelFechaNaciemiento.setText("Fecha de Nacimiento :");
+        getContentPane().add(jLabelFechaNaciemiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+
+        jTextFieldFechaNacimiento.setText("Día - Mes - Año");
+        getContentPane().add(jTextFieldFechaNacimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 330, 30));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo.jpg"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -127,7 +136,7 @@ public class RegistrarProfesor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
-        
+       validarCampos();
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
     void opcionCancelar(){
@@ -149,6 +158,7 @@ public class RegistrarProfesor extends javax.swing.JFrame {
     String rfc = "";
     String curp = "";
     String numeroDePersonal = "";
+    String fechaNacimiento = "";
     String genero = "";
     String correo = "";
     String contraseña = "";
@@ -158,7 +168,7 @@ public class RegistrarProfesor extends javax.swing.JFrame {
                && jTextFieldApellidoMaterno.getText().isEmpty() && jTextFieldRFC.getText().isEmpty()
                         && jTextFieldCURP.getText().isEmpty() && jTextFieldNumeroDePersonal.getText().isEmpty()
                                 && jTextFieldGenero.getText().isEmpty() && jTextFieldCorreo.getText().isEmpty()
-                                        && jTextFieldContraseña.getText().isEmpty()){
+                                        && jTextFieldContraseña.getText().isEmpty() && jTextFieldFechaNacimiento.getText().isEmpty()){
                                                 JOptionPane.showMessageDialog(this, "Favor de no dejar campos vacíos");  
        }else{
            nombreProfesor = jTextFieldNombre.getText();
@@ -167,6 +177,7 @@ public class RegistrarProfesor extends javax.swing.JFrame {
            rfc = jTextFieldRFC.getText();
            curp = jTextFieldCURP.getText();
            numeroDePersonal = jTextFieldNumeroDePersonal.getText();
+           fechaNacimiento = jTextFieldFechaNacimiento.getText();
            genero = jTextFieldGenero.getText();
            correo = jTextFieldCorreo.getText();
            contraseña = jTextFieldContraseña.getText();
@@ -174,22 +185,35 @@ public class RegistrarProfesor extends javax.swing.JFrame {
            ValidacionesDeRegistroDeUsuario usuario = new ValidacionesDeRegistroDeUsuario();
 
            if((usuario.validarNombre(nombreProfesor) == true) && (usuario.validarNombre(apellidoPaterno)==true)
-                   && usuario.validarNombre(apellidoPaterno)==true && (usuario.validarRFCoCURP(rfc) == true)
-                            && (usuario.validarRFCoCURP(curp)==true) && (usuario.validarNumeroDePersonal(numeroDePersonal)== true)
-                                    && (usuario.validarGenero(genero)==true) && (usuario.validarCorreo(correo))
+                   && usuario.validarNombre(apellidoPaterno)==true
+                             && (usuario.validarNumeroDePersonal(numeroDePersonal)== true)
+                                    && (usuario.validarGenero(genero)==true) && (usuario.validarCorreo(correo) == true)
                                             && (usuario.validarContraseña(contraseña)==true)){
-                                                guardarProfesor();
-           }else{
-               JOptionPane.showMessageDialog(this, "Información incorrecta,"
-                       + "Ingrese una información válida para cada campo");
+                                                guardarProfesor(numeroDePersonal, nombreProfesor, apellidoMaterno, apellidoPaterno, curp, rfc, fechaNacimiento, genero, contraseña, correo);
+           }else if(usuario.validarNombre(nombreProfesor) == false){
+               JOptionPane.showMessageDialog(this, "Verificar nombre");
+           }else if(usuario.validarNombre(apellidoPaterno)==false){
+               JOptionPane.showMessageDialog(this, "Verificar apellido paterno");
+           }else if(usuario.validarNombre(apellidoPaterno)==false){
+               JOptionPane.showMessageDialog(this, "Verificar apellido materno");
+           }else if(usuario.validarNumeroDePersonal(numeroDePersonal)== false){
+               JOptionPane.showMessageDialog(this, "Verificar numero de personal");
+           }else if(usuario.validarGenero(genero)==false){
+               JOptionPane.showMessageDialog(this, "Verificar genero");
+           }else if(usuario.validarCorreo(correo) == false){
+               JOptionPane.showMessageDialog(this, "Verificar correo");
+           }else if(usuario.validarContraseña(contraseña)==false){
+               JOptionPane.showMessageDialog(this, "Verificar contraseña");
            }
        }
     }
     
-    void guardarProfesor(){
+    void guardarProfesor(String numeroDePersonal,String nombreProfesor,String apellidoMaterno,String apellidoPaterno,String curp,String rfc,String fechaNacimiento,String genero,String contraseña,String correo){
         DocenteDAO profesor = new DocenteDAO();
         try {
-            profesor.guardarDocente(numeroDePersonal, nombreProfesor, apellidoMaterno, apellidoPaterno, rfc, curp, genero, correo, contraseña);
+            profesor.guardarDocente(numeroDePersonal, nombreProfesor, apellidoMaterno, apellidoPaterno, curp, rfc, fechaNacimiento, genero, contraseña, correo);
+            JOptionPane.showMessageDialog(this, "Registro exitoso");
+            dispose();
         } catch (SQLException | ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(this, "No se puede acceder a la base de datos en este momento. Intente más tarde.");
             Logger.getLogger(RegistrarProfesor.class.getName()).log(Level.SEVERE, null, ex);
@@ -212,6 +236,7 @@ public class RegistrarProfesor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelCURP;
     private javax.swing.JLabel jLabelContraseña;
     private javax.swing.JLabel jLabelCorreo;
+    private javax.swing.JLabel jLabelFechaNaciemiento;
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel jLabelGenero;
     private javax.swing.JLabel jLabelNombre;
@@ -223,6 +248,7 @@ public class RegistrarProfesor extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldCURP;
     private javax.swing.JTextField jTextFieldContraseña;
     private javax.swing.JTextField jTextFieldCorreo;
+    private javax.swing.JTextField jTextFieldFechaNacimiento;
     private javax.swing.JTextField jTextFieldGenero;
     private javax.swing.JTextField jTextFieldNombre;
     private javax.swing.JTextField jTextFieldNumeroDePersonal;

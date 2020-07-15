@@ -3,9 +3,17 @@
 */
 package GUIS;
 
+import DataAccess.DocenteDAO;
+import Dominio.Docente;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
+    
     public VentanaPrincipalAdministrador() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -124,9 +132,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonRegistrarProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarProfesorActionPerformed
-        RegistrarProfesor irARegistrarProfesor = new RegistrarProfesor();
-        irARegistrarProfesor.setVisible(true);
-        dispose();
+        validarPrecondiciones(todosLosDocentes);
     }//GEN-LAST:event_jButtonRegistrarProfesorActionPerformed
 
     private void jButtonRegistraDirectrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistraDirectrActionPerformed
@@ -163,6 +169,32 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
        dispose();
     }//GEN-LAST:event_jButtonCerrarSesionActionPerformed
 
+    ArrayList <Docente> todosLosDocentes = null;
+    
+    public ArrayList obtenerTodosLosProfesores(){
+        try {
+            DocenteDAO docente = new DocenteDAO();
+            todosLosDocentes = docente.leerTodosLosDocentes();
+        } catch (SQLException | ClassNotFoundException ex) {
+            JOptionPane.showMessageDialog(this, "No se pudo acceder a la base de datos, intente más tarde");
+            Logger.getLogger(VentanaPrincipalAdministrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return todosLosDocentes;
+    }
+    
+    void validarPrecondiciones(ArrayList todosLosDocentes){
+      int numeroMaximoDeProfesores = 1;
+      if(todosLosDocentes.size() <= numeroMaximoDeProfesores){
+        RegistrarProfesor irARegistrarProfesor = new RegistrarProfesor();
+        irARegistrarProfesor.setVisible(true);
+        dispose();
+      }else{
+         JOptionPane.showMessageDialog(this, "Ya existen dos profesores registrados, para registrar otro"
+                 + "Elimine alguno");
+      }
+        
+    }
+    
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

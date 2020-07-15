@@ -12,7 +12,6 @@ import java.util.Date;
  * @author gabrielflores
  */
 public class Docente {
-    int id_docente;
     String nombre;
     String apellidoPaterno;
     String apellidoMaterno;
@@ -26,7 +25,7 @@ public class Docente {
     
     
     public Docente () {}
-    public Docente (String numPersonal, String nombre, String apellidoMaterno, String apellidoPaterno, String rfc, String curp, String sexo, String correo, String contaseña) {
+    public Docente (String numPersonal, String nombre, String apellidoMaterno, String apellidoPaterno, String curp, String rfc, String fechaNacimiento, String sexo, String contraseña, String correo) {
     this.nombre = nombre;
     this.apellidoMaterno = apellidoMaterno;
     this.apellidoPaterno = apellidoPaterno;
@@ -93,15 +92,6 @@ public class Docente {
     public void setNumPersonal(String numPersonal) {
         this.numPersonal = numPersonal;
     }
-
-    public int getId_docente() {
-        return id_docente;
-    }
-
-    public void setId_docente(int id_docente) {
-        this.id_docente = id_docente;
-    }
-    
     public String getRfc(){
         return rfc;
     }
