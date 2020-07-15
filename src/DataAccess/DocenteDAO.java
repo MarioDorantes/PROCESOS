@@ -43,7 +43,6 @@ public class DocenteDAO implements IDocenteDAO {
         statement.setString(8, sexo);
         statement.setString(9, contraseña);
         statement.setString(10, correo);
-        
         statement.executeUpdate();
     }
     

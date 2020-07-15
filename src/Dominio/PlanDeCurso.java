@@ -12,71 +12,83 @@ import java.util.Date;
  * @author gabrielflores
  */
 public class PlanDeCurso {
-    int id_plan;
-    Date fechaInicio;
-    Date fechaFin;
-    String nombreCurso;
-    String listaTemas;
-    String listaActividades;
-    int numeroActividades;
+    String id_plan;
+    String fechaInicio;
+    String fechaFin;
+    String fechasTemas;
+    String temasCurso;
+    String nombreActividades;
+    String NRC;
     
     public PlanDeCurso () {}
+    
+    public PlanDeCurso (String id_plan, String fechaInicio, String fechaFin, String fechasTemas, String temasCurso, String nombreActividades, String NRC) {
+        this.id_plan = id_plan;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.fechasTemas = fechasTemas;
+        this.temasCurso = temasCurso;
+        this.nombreActividades = nombreActividades;
+        this.NRC = NRC;
+    }
 
-    public Date getFechaInicio() {
+    public String getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(String fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public Date getFechaFin() {
+    public String getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(Date fechaFin) {
+    public void setFechaFin(String fechaFin) {
         this.fechaFin = fechaFin;
     }
 
-    public String getNombreCurso() {
-        return nombreCurso;
-    }
-
-    public void setNombreCurso(String nombreCurso) {
-        this.nombreCurso = nombreCurso;
-    }
-
-    public int getNumeroActividades() {
-        return numeroActividades;
-    }
-
-    public void setNumeroActividades(int numeroActividades) {
-        this.numeroActividades = numeroActividades;
-    }
-
-    public String getListaTemas() {
-        return listaTemas;
-    }
-
-    public void setListaTemas(String listaTemas) {
-        this.listaTemas = listaTemas;
-    }
-
-    public String getListaActividades() {
-        return listaActividades;
-    }
-
-    public void setListaActividades(String listaActividades) {
-        this.listaActividades = listaActividades;
-    }
-
-    public int getId_plan() {
+    public String getId_plan() {
         return id_plan;
     }
 
-    public void setId_plan(int id_plan) {
+    public void setId_plan(String id_plan) {
         this.id_plan = id_plan;
     }
+
+    public String getFechasTemas() {
+        return fechasTemas;
+    }
+
+    public void setFechasTemas(String fechasTemas) {
+        this.fechasTemas = fechasTemas;
+    }
+
+    public String getTemasCurso() {
+        return temasCurso;
+    }
+
+    public void setTemasCurso(String temasCurso) {
+        this.temasCurso = temasCurso;
+    }
+
+    public String getNombreActividades() {
+        return nombreActividades;
+    }
+
+    public void setNombreActividades(String nombreActividades) {
+        this.nombreActividades = nombreActividades;
+    }
+
+    public String getNRC() {
+        return NRC;
+    }
+
+    public void setNRC(String NRC) {
+        this.NRC = NRC;
+    }
+    
+    
     
     
     

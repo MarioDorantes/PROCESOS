@@ -23,17 +23,18 @@ public class AvanceDeCursoDAO implements IAvanceDeCursoDAO {
     @Override
     public void guardarAvanceDeCurso(AvanceDeCurso avance) throws SQLException, ClassNotFoundException {
         connection = connectDB.getConnection();
-        String query = "INSERT INTO avancedecurso "
-                + "(actividadesPorRealizar, actividadesRealizadas, fechaDelAvance, porcentajeDeAvance, temasAbordados, temasPorAbordar) "
-                + "VALUES (?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO avance_de_curso "
+                + "(fechaAvance, porcentajeDeAvance, temasAbordados, temasPorVer, actividadesRealizadas, actividadesPorRealizar, idPlan) "
+                + "VALUES (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, avance.getActividadesPorRealizar());
-        statement.setString(2, avance.getActividadesRealizadas());
-        statement.setDate(3, (java.sql.Date) avance.getFechaDelAvance());
-        statement.setInt(4, avance.getPorcentajeDeAvance());
-        statement.setString(5, avance.getTemasAbordados());
-        statement.setString(6, avance.getTemasPorAbordar());
-        statement.executeQuery();
+        statement.setString(1, avance.getFechaDelAvance());
+        statement.setString(2, avance.getPorcentajeDeAvance());
+        statement.setString(3, avance.getTemasAbordados());
+        statement.setString(4, avance.getTemasPorAbordar());
+        statement.setString(5, avance.getActividadesRealizadas());
+        statement.setString(6, avance.getActividadesPorRealizar());
+        statement.setString(7, avance.getId_plan());
+        statement.executeUpdate();
     }
     
 }

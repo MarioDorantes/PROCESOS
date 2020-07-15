@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package DataAccess;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,15 +5,12 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author BRANDON TRUJILLO
- */
+
 public class ConnectDB {
-    private static String url = "jdbc:mysql://localhost:3308/CursosProcesos?serverTimezone=US/Central";
+    private static String url = "jdbc:mysql://localhost:3306/CursosProcesos?serverTimezone=US/Central";
     private static String driverName = "com.mysql.cj.jdbc.Driver";
-    private static String username = "BATC";
-    private static String password = "brandontrujillo17";
+    private static String username = "root";
+    private static String password = "Flipper10011";
     private static Connection con;
 
     public static Connection getConnection() throws SQLException, ClassNotFoundException {
