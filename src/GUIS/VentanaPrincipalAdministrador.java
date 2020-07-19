@@ -192,7 +192,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         dispose();
       }else{
          JOptionPane.showMessageDialog(this, "Ya existen dos profesores registrados, para registrar otro"
-                 + " elimine alguno");
+                 + "  elimine alguno");
       }
         
     }

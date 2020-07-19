@@ -185,10 +185,10 @@ public class RegistrarProfesor extends javax.swing.JFrame {
            ValidacionesDeRegistroDeUsuario usuario = new ValidacionesDeRegistroDeUsuario();
 
            if((usuario.validarNombre(nombreProfesor) == true) && (usuario.validarNombre(apellidoPaterno)==true)
-                   && usuario.validarNombre(apellidoPaterno)==true
-                             && (usuario.validarNumeroDePersonal(numeroDePersonal)== true)
+                   && (usuario.validarNombre(apellidoPaterno)==true) && (usuario.validarFecha(fechaNacimiento)==true)
+                             && (usuario.validarNumeroDePersonal(numeroDePersonal)== true) && (usuario.validarCURP(curp)==true)
                                     && (usuario.validarGenero(genero)==true) && (usuario.validarCorreo(correo) == true)
-                                            && (usuario.validarContraseña(contraseña)==true)){
+                                            && (usuario.validarContraseña(contraseña)==true) && (usuario.validarRFC(rfc)==true)){
                                                 guardarProfesor(numeroDePersonal, nombreProfesor, apellidoMaterno, apellidoPaterno, curp, rfc, fechaNacimiento, genero, contraseña, correo);
            }else if(usuario.validarNombre(nombreProfesor) == false){
                JOptionPane.showMessageDialog(this, "Verificar nombre");
@@ -196,12 +196,18 @@ public class RegistrarProfesor extends javax.swing.JFrame {
                JOptionPane.showMessageDialog(this, "Verificar apellido paterno");
            }else if(usuario.validarNombre(apellidoPaterno)==false){
                JOptionPane.showMessageDialog(this, "Verificar apellido materno");
+           }else if(usuario.validarFecha(fechaNacimiento)==false){
+               JOptionPane.showMessageDialog(this, "Verificar que la fecha sea día-mes-año");
            }else if(usuario.validarNumeroDePersonal(numeroDePersonal)== false){
                JOptionPane.showMessageDialog(this, "Verificar numero de personal");
+           }else if(usuario.validarCURP(curp)==false){
+               JOptionPane.showMessageDialog(this, "Verificar CURP");
            }else if(usuario.validarGenero(genero)==false){
                JOptionPane.showMessageDialog(this, "Verificar genero");
            }else if(usuario.validarCorreo(correo) == false){
                JOptionPane.showMessageDialog(this, "Verificar correo");
+           }else if(usuario.validarRFC(rfc)==false){
+               JOptionPane.showMessageDialog(this, "Verificar RFC");
            }else if(usuario.validarContraseña(contraseña)==false){
                JOptionPane.showMessageDialog(this, "Verificar contraseña");
            }

@@ -3,13 +3,17 @@
 */
 package LogicaDeNegocio;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 public class ValidacionesDeRegistroDeUsuario {
     boolean validarNombre;
     boolean validarNumeroDePersonal;
     boolean validarGenero;
-    boolean validarRFCoCURP;
+    boolean validarCURP;
     boolean validarCorreo;
     boolean validarContraseña;
+    boolean validarRFC;
     
     
     public boolean validarNombre (String nombre) {
@@ -24,12 +28,16 @@ public class ValidacionesDeRegistroDeUsuario {
         return validarGenero = genero.matches("^[M|F|m|f]{1}[a|s|c|u|l|i|n|o|e|m]*$");
     }
     
-    public boolean validarRFCoCURP (String rfc){
-        return validarRFCoCURP = rfc.matches("^([A-Z][0-9]?){5,18}$");
+    public boolean validarCURP (String curp){
+        return validarCURP = curp.matches("^[A-Z|0-9]{18}$");
+    }
+    
+    public boolean validarRFC (String rfc){
+        return validarRFC = rfc.matches("^[A-Z|0-9]{13}$");
     }
     
     public boolean validarCorreo (String correo){
-        return validarCorreo = correo.matches("^[(A-Z)(a-z)(0-9)(/)(.)(#)(_)]{5,20}[@]{1}"
+        return validarCorreo = correo.matches("^[(A-Z)(a-z)(0-9)(/)(.)(#)(_)]{3,20}[@]{1}"
                 + "[g|m|a|i|l|e|s|t|u|d|n|h|o|k]*[.|c|o|m|x|u|v]{3,6}$");
     }
     
@@ -37,5 +45,15 @@ public class ValidacionesDeRegistroDeUsuario {
         return validarContraseña = contraseña.matches("[0-9]{0,}[(A-ZÑ)(a-zñ)(/)(.)(#)]{0,16}[0-9]{0,}"
                 + "[(A-ZÑ)(a-zñ)(/)(.)(#)]{1,16}[0-9]{0,}[(A-ZÑ)(a-zñ)(/)(.)(#)]{0,16}"
                 + "[0-9]{1,}[(A-ZÑ)(a-zñ)(/)(.)(#)]{0,16}");
+    }
+    
+    SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy");
+    public boolean validarFecha(String fecha){
+        try{
+            format.parse(fecha);
+            return true;
+        }catch(ParseException e){
+            return false;
+        }
     }
 }
